@@ -1,3 +1,8 @@
+import * as firebase from 'firebase/app';
+
+import 'firebase/storage';
+import 'firebase/firestore';
+
 var firebaseConfig = {
   apiKey: 'AIzaSyCofODsQw1nWGo79yOP16l_P2_RujBFrho',
   authDomain: 'firegram-cb001.firebaseapp.com',
@@ -9,3 +14,8 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+
+const projectStorage = firebase.storage();
+const projectFirestore = firebase.firestore();
+
+export { projectStorage, projectFirestore };
